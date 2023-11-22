@@ -1,0 +1,27 @@
+{% load static %}
+
+<header class="header page__header">
+    <div class="branding header__branding">
+        <img class="img branding__logo" src="{% static 'logo.png' %}" alt="Logo" />
+        <h1 class="text text--large branding__text">Plane Mapper</h1>
+    </div>
+    <nav class="nav header__nav">
+        <a class="link nav__link nav__link--active" href="/">
+            <span class="text text--medium link__text">Home</span>
+        </a>
+        <a class="link nav__link" href="https://www.terminalsystems.ca/about-tsi">
+            <span class="text text--medium link__text">About Us</span>
+        </a>
+        <a class="link nav__link" href="https://www.terminalsystems.ca/contact">
+            <span class="text text--medium link__text">Contact Us</span>
+        </a>
+        <button id="map-filters-button" class="button button--primary nav__button" type="button">
+            <svg class="svg svg--small button__icon">
+                <use href="{% static 'spritesheet.svg' %}#filter" />
+            </svg>
+            <span class="text text--medium button__text">
+                <strong>Filters</strong>
+            </span>
+        </button>
+    </nav>
+</header>

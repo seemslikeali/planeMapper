@@ -1,0 +1,27 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>TSI - Plane Mapper</title>
+        <link rel="icon" href="{% static 'favicon.ico' %}" />
+        <link rel="stylesheet" href="{% static 'leaflet/leaflet.css' %}" />
+        <link rel="stylesheet" href="{% static 'bulma.css' %}" />
+        <link rel="stylesheet" href="{% static 'leaflet/plugins/L.Control.Layers.Tree.css' %}" />
+        <!--<link rel="stylesheet" href="{% static 'bulma.css' %}">-->
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+        <script src="{% static 'leaflet/leaflet.js' %}"></script>
+        <!--<script src="{% static 'leaflet/leaflet.curve.js' %}"></script>-->
+        <script src="{% static 'leaflet/plugins/L.Control.Layers.Tree.js' %}"></script>
+        <script src="{% static 'leaflet/plugins/leaflet.geodesic.umd.min.js' %}"></script>
+        <script type="module" src="{% static 'script.js' %}"></script>
+    </head>
+    <body class="page">
+        {% include 'nav.html' %}
+        {% block content %}
+        {% endblock %}
+        {% include 'footer.html' %}
+    </body>
+</html>

@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block content %}
+<main class="page__main">
+    <form id="map-filters" class="map-filters map-filters--hidden" action="#">
+        <fieldset class="fieldset map-filters__fieldset">
+            <legend class="text text--medium fieldset__legend"><strong>Filters&colon;</strong></legend>
+            <div class="filter">
+                <label class="text text--medium filter__label" for="nation">Nation&colon;</label>
+                <select title="Nation Filter" id="nation" class="select filter__select">
+                    <option name="None" value=""></option>
+                </select>
+            </div>
+            <div class="filter">
+                <label class="text text--medium filter__label" for="airport">Airport&colon;</label>
+                <select title="Airport Filter" id="airport" class="select filter__select">
+                    <option name="None" value=""></option>
+                </select>
+            </div>
+            <div class="filter">
+                <label class="text text--medium filter__label" for="carrier">Carrier&colon;</label>
+                <select title="Carrier Filter" id="carrier" class="select filter__select">
+                    <option name="None" value=""></option>
+                </select>
+            </div>
+            <button id="userLoc" class="button">User Location</button>
+        </fieldset>
+    </form>
+    <div id="map" class="map"></div>
+    {% comment %} <div id ="accept-cookies-popup">
+        <h2>Accept Cookies</h2>
+        <button id="accept-cookies-yes">Yes</button>
+        <button id="accept-cookies-no">No</button>
+    </div> {% endcomment %}
+
+    <article class="message is-info coookie" id ="accept-cookies-popup" >
+        <div style="width:100%; text-align: center;"> 
+        <div class="message-header">
+          <h3>This website uses cookies</h3>
+          
+        </div>
+        <div class="message-body" style="font-size:16px; width:100%; ">
+          We use cookies to ensure that we give you the best experience on our website. Please accept cookies to continue using our site optimally.
+          <br>
+          <button class="button" style="display: inline-block;" id="accept-cookies-yes">Accept</button>
+          <button class="button" style="display: inline-block;" id="accept-cookies-no">Decline</button>
+        <br><br>
+        </div>
+        </div>
+      </article>
+</main>
+{% endblock content %}
